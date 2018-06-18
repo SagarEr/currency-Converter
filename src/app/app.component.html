@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+   <div >
+     <input type="number" (keyup)="value1 && cur1 && cur2 && input1Change()" placeholder="First currency" [(ngModel)]="value1">
+     <select (change)="drop1Change()" [(ngModel)]="cur1" >
+       <option *ngFor="let c1 of currency;let i=index"  [value]="c1">{{c1}}</option>
+     </select>
+   
+    <input type="number" [(ngModel)]="value2" (keyup)="value2 && cur1 && cur2 && input2Change()" placeholder="Second currency">
+    <select [(ngModel)]="cur2" (change)="drop2Change(i,cur2)">
+      <option *ngFor="let c2 of currency;let i=index"   [value]="c2">{{c2}}</option>
+    </select>
+  </div>
+  </div>
